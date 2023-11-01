@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+    function checkLength(name, min, max)
+    {
+        if (name.length >= min && name.length <= max)
+        {
+            alert("Okay");
+        }
+        else 
+        {
+            let m = "이름의 길이가 너무 "
+            if (name.length < min)
+            {
+                m += "짧습니다."
+            }
+            else 
+            {
+                m += "깁니다."
+            }
+            m += "\n" + min + "과 " + max + "사이로 입력해주세요";
+            alert(m);
+        }
+    }
+    </script>
+
+    <form>
+    이름(6-8 문자): <input type='text' id='name' />
+    <input type='button' onclick="checkLength(document.getElementById('name').value, 6, 8)" value='확인' />
+    </form>
+</body>
+</html>
